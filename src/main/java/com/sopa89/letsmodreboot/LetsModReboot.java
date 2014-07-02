@@ -3,6 +3,7 @@ package com.sopa89.letsmodreboot;
 import com.sopa89.letsmodreboot.handler.ConfigurationHandler;
 import com.sopa89.letsmodreboot.proxy.IProxy;
 import com.sopa89.letsmodreboot.reference.Reference;
+import com.sopa89.letsmodreboot.utility.LogHelper;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -23,17 +24,18 @@ public class LetsModReboot
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+		LogHelper.info("Pre-Initialization Complete!");
 	}
 	
 	@Mod.EventHandler()
 	public void init(FMLInitializationEvent event)
 	{
-		
+		LogHelper.info("Initialization Complete!");
 	}
 	
 	@Mod.EventHandler()
 	public void postInit(FMLPostInitializationEvent event)
 	{
-		
+		LogHelper.info("Post-Initializaiton Complete!");
 	}
 }
