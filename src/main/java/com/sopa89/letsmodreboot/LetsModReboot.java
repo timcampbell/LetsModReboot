@@ -1,6 +1,7 @@
 package com.sopa89.letsmodreboot;
 
 import com.sopa89.letsmodreboot.handler.ConfigurationHandler;
+import com.sopa89.letsmodreboot.init.ModItems;
 import com.sopa89.letsmodreboot.proxy.IProxy;
 import com.sopa89.letsmodreboot.reference.Reference;
 import com.sopa89.letsmodreboot.utility.LogHelper;
@@ -26,6 +27,8 @@ public class LetsModReboot
 	{
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+		ModItems.init();
+		
 		LogHelper.info("Pre-Initialization Complete!");
 	}
 	
