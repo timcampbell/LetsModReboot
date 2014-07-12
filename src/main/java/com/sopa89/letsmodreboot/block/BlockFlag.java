@@ -1,5 +1,6 @@
 package com.sopa89.letsmodreboot.block;
 
+
 public class BlockFlag extends BlockLMRB
 {
 	public BlockFlag()
