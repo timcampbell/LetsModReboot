@@ -21,6 +21,7 @@ public class BlockLMRB extends Block
 	public BlockLMRB()
 	{
 		super(Material.rock);
+		this.setCreativeTab(CreativeTabLMRB.LMRB_TAB);
 	}
 	
 	@Override
