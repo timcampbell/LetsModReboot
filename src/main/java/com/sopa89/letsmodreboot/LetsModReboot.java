@@ -3,6 +3,7 @@ package com.sopa89.letsmodreboot;
 import com.sopa89.letsmodreboot.handler.ConfigurationHandler;
 import com.sopa89.letsmodreboot.init.ModBlocks;
 import com.sopa89.letsmodreboot.init.ModItems;
+import com.sopa89.letsmodreboot.init.Recipes;
 import com.sopa89.letsmodreboot.proxy.IProxy;
 import com.sopa89.letsmodreboot.reference.Reference;
 import com.sopa89.letsmodreboot.utility.LogHelper;
@@ -37,6 +38,7 @@ public class LetsModReboot
 	@Mod.EventHandler()
 	public void init(FMLInitializationEvent event)
 	{
+		Recipes.init();
 		LogHelper.info("Initialization Complete!");
 	}
 	
