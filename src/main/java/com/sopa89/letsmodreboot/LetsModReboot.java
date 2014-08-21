@@ -1,5 +1,6 @@
 package com.sopa89.letsmodreboot;
 
+import com.sopa89.letsmodreboot.client.handler.KeyEventHandler;
 import com.sopa89.letsmodreboot.handler.ConfigurationHandler;
 import com.sopa89.letsmodreboot.init.ModBlocks;
 import com.sopa89.letsmodreboot.init.ModItems;
@@ -29,7 +30,11 @@ public class LetsModReboot
 	{
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+		
+		proxy.registerKeyBindings();
+		
 		ModItems.init();
+		
 		ModBlocks.init();
 		
 		LogHelper.info("Pre-Initialization Complete!");
@@ -38,7 +43,10 @@ public class LetsModReboot
 	@Mod.EventHandler()
 	public void init(FMLInitializationEvent event)
 	{
+		FMLCommonHandler.instance().bus().register(new KeyEventHandler());
+		
 		Recipes.init();
+		
 		LogHelper.info("Initialization Complete!");
 	}
 	
